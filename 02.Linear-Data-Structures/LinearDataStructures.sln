@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03.SortListOfInts", "03.Sor
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04.MaxSequenceOfEqualNumbers", "04.MaxSequenceOfEqualNumbers\04.MaxSequenceOfEqualNumbers.csproj", "{5AA42DB4-9466-4166-BE6F-95F3D31CB9DE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05.NegativeNumbersRemover", "05.NegativeNumbersRemover\05.NegativeNumbersRemover.csproj", "{6A283ED8-056F-482F-96B4-73B7DF5F5C42}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinearDataStructures.Tests", "LinearDataStructures.Tests\LinearDataStructures.Tests.csproj", "{0568F40F-1298-4038-8509-153C2FE6B025}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +37,14 @@ Global
 		{5AA42DB4-9466-4166-BE6F-95F3D31CB9DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5AA42DB4-9466-4166-BE6F-95F3D31CB9DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5AA42DB4-9466-4166-BE6F-95F3D31CB9DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A283ED8-056F-482F-96B4-73B7DF5F5C42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A283ED8-056F-482F-96B4-73B7DF5F5C42}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A283ED8-056F-482F-96B4-73B7DF5F5C42}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A283ED8-056F-482F-96B4-73B7DF5F5C42}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0568F40F-1298-4038-8509-153C2FE6B025}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0568F40F-1298-4038-8509-153C2FE6B025}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0568F40F-1298-4038-8509-153C2FE6B025}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0568F40F-1298-4038-8509-153C2FE6B025}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
