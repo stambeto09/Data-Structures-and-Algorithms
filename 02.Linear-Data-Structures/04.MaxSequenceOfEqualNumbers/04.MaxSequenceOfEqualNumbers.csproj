@@ -7,8 +7,8 @@
     <ProjectGuid>{5AA42DB4-9466-4166-BE6F-95F3D31CB9DE}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>_04.MaxSequenceOfEqualNumbers</RootNamespace>
-    <AssemblyName>04.MaxSequenceOfEqualNumbers</AssemblyName>
+    <RootNamespace>LinearDataStructures</RootNamespace>
+    <AssemblyName>LinearDataStructures</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

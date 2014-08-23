@@ -4,11 +4,11 @@
     using System.Collections.Generic;
     using System.Linq;
 
-    class MaxSequenceOfEqualNumbers
+    public class MaxSequenceOfEqualNumbers
     {
         static void Main()
         {
-            Console.Write("Enter a number or empty line for end: ");
+            Console.WriteLine("Enter a number or empty line for end: ");
             string line = Console.ReadLine();
             int number = 0;
             List<int> numbers = new List<int>();
@@ -28,10 +28,15 @@
                 line = Console.ReadLine();
             }
 
-            FindMaximalSequence(numbers);
+            List<int> result = FindMaximalSequence(numbers);
+
+            foreach (var n in result)
+            {
+                Console.WriteLine(n);
+            }
         }
 
-        private static void FindMaximalSequence(List<int> numbers)
+        public static List<int> FindMaximalSequence(List<int> numbers)
         {
             int start = 0;
             int count = 1;
@@ -57,10 +62,14 @@
                 }
             }
 
-            for (int index = bestStart; index < bestCount + bestStart ; index++)
+            List<int> result = new List<int>();
+
+            for (int index = bestStart; index < bestCount + bestStart; index++)
             {
-                Console.WriteLine(numbers[index]);
+                result.Add(numbers[index]);
             }
+
+            return result;
         }
     }
 }
