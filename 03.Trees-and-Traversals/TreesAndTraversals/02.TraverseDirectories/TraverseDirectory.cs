@@ -1,45 +1,80 @@
-﻿namespace TreesAndTraversals
+﻿namespace TraverseDirectories
 {
     using System;
     using System.Collections.Generic;
-    using System.Linq;
-    using System.Text;
-    using System.Threading.Tasks;
     using System.IO;
+    using System.Text;
 
-    class TraverseDirectory
+    /// <summary>
+    /// Demonstrates directory traverse using Queue.
+    /// </summary>
+    public class TraverseDirectories
     {
-        static void Main()
+        /// <summary>
+        /// Mains this instance.
+        /// </summary>
+        public static void Main()
         {
-            string directoryPath = "C:\\";
-            List<string> listOfFiles = SearchDirectory(directoryPath);
+            const string ROOT_DIRECTORY = "C:\\Windows";
 
-            foreach (var file in listOfFiles)
+            List<string> directories = new List<string>();
+            List<string> executables = new List<string>();
+            StringBuilder errorLog = new StringBuilder();
+            Queue<string> rootDirectories = new Queue<string>();
+
+            // Dig down recursively through directories using queue. 
+            rootDirectories.Enqueue(ROOT_DIRECTORY);
+            while (rootDirectories.Count > 0)
             {
-                Console.WriteLine(file);
+                var currentDirectory = rootDirectories.Peek();
+                try
+                {
+                    // Save all directories.
+                    foreach (var dir in Directory.GetDirectories(currentDirectory))
+                    {
+                        rootDirectories.Enqueue(dir);
+                        directories.Add(dir);
+                    }
+
+                    // Save all files.
+                    var files = Directory.GetFiles(currentDirectory, "*.exe");
+                    executables.AddRange(files);
+                }
+                catch (UnauthorizedAccessException ex)
+                {
+                    errorLog.AppendLine(ex.Message);
+                }
+
+                rootDirectories.Dequeue();
             }
+
+            // Print results
+            if (errorLog.Length > 0)
+            {
+                Console.WriteLine("Errors:");
+                Console.WriteLine(errorLog);
+            }
+
+            Console.WriteLine("Directories:");
+            PrintCollection(directories);
+
+            Console.WriteLine("Executables:");
+            PrintCollection(executables);
         }
 
-        private static List<string> SearchDirectory(string directoryPath)
+        /// <summary>
+        /// Prints an enumerable collection.
+        /// </summary>
+        /// <param name="elements">The elements.</param>
+        private static void PrintCollection(IEnumerable<string> elements)
         {
-            List<string> listOfFiles = new List<string>();
-            try
+            StringBuilder elementsAsString = new StringBuilder();
+            foreach (var element in elements)
             {
-                foreach (string directory in Directory.GetDirectories(directoryPath))
-                {
-                    foreach (string file in Directory.GetFiles(directory, ".exe"))
-                    {
-                        listOfFiles.Add(file);
-                    }
-                    SearchDirectory(directory);
-                }
-            }
-            catch (SystemException exception)
-            {
-                Console.WriteLine(exception.Message);
+                elementsAsString.AppendLine(element);
             }
 
-            return listOfFiles;
+            Console.WriteLine(elementsAsString.ToString());
         }
     }
 }

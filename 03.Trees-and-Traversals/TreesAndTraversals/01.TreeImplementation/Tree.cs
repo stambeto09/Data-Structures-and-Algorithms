@@ -71,8 +71,10 @@
             Console.WriteLine(); 
 
             // Find longest path from the root
-            var longestPath = FindLongestPath(FindRoot(nodes));
-            Console.WriteLine("Number of levels: {0}", longestPath + 1);
+            var longestPathFromRoot = FindLongestPath(FindRoot(nodes));
+            Console.WriteLine("Number of levels: {0}", longestPathFromRoot + 1);
+
+
         }
 
         private static int FindLongestPath(Node<int> root)
