@@ -29,6 +29,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "12.Stack", "12.Stack\12.Sta
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "13.LinkedQueueImplementation", "13.LinkedQueueImplementation\13.LinkedQueueImplementation.csproj", "{6A8E0D26-6C85-41C0-B277-2444B7144202}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "14.Labyrinth", "14.Labyrinth\14.Labyrinth.csproj", "{54E04B25-BDE8-499F-AA9B-A47846EAED20}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -87,6 +89,10 @@ Global
 		{6A8E0D26-6C85-41C0-B277-2444B7144202}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6A8E0D26-6C85-41C0-B277-2444B7144202}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6A8E0D26-6C85-41C0-B277-2444B7144202}.Release|Any CPU.Build.0 = Release|Any CPU
+		{54E04B25-BDE8-499F-AA9B-A47846EAED20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54E04B25-BDE8-499F-AA9B-A47846EAED20}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54E04B25-BDE8-499F-AA9B-A47846EAED20}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54E04B25-BDE8-499F-AA9B-A47846EAED20}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
