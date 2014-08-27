@@ -5,14 +5,8 @@
     using System.IO;
     using System.Text;
 
-    /// <summary>
-    /// Demonstrates directory traverse using Queue.
-    /// </summary>
     public class TraverseDirectories
     {
-        /// <summary>
-        /// Mains this instance.
-        /// </summary>
         public static void Main()
         {
             const string ROOT_DIRECTORY = "C:\\Windows";
@@ -22,21 +16,18 @@
             StringBuilder errorLog = new StringBuilder();
             Queue<string> rootDirectories = new Queue<string>();
 
-            // Dig down recursively through directories using queue. 
             rootDirectories.Enqueue(ROOT_DIRECTORY);
             while (rootDirectories.Count > 0)
             {
                 var currentDirectory = rootDirectories.Peek();
                 try
                 {
-                    // Save all directories.
                     foreach (var dir in Directory.GetDirectories(currentDirectory))
                     {
                         rootDirectories.Enqueue(dir);
                         directories.Add(dir);
                     }
 
-                    // Save all files.
                     var files = Directory.GetFiles(currentDirectory, "*.exe");
                     executables.AddRange(files);
                 }
@@ -48,7 +39,6 @@
                 rootDirectories.Dequeue();
             }
 
-            // Print results
             if (errorLog.Length > 0)
             {
                 Console.WriteLine("Errors:");
@@ -62,10 +52,6 @@
             PrintCollection(executables);
         }
 
-        /// <summary>
-        /// Prints an enumerable collection.
-        /// </summary>
-        /// <param name="elements">The elements.</param>
         private static void PrintCollection(IEnumerable<string> elements)
         {
             StringBuilder elementsAsString = new StringBuilder();
