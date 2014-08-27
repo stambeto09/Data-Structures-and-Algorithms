@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.TreeImplementation", "01
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.TraverseDirectories", "02.TraverseDirectories\02.TraverseDirectories.csproj", "{7B5F30A9-05B2-4F68-826A-38DB42236C2A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03.FileSystem", "03.FileSystem\03.FileSystem.csproj", "{E5F8EA70-E2F6-4117-9146-EAC5DB1393A5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{7B5F30A9-05B2-4F68-826A-38DB42236C2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7B5F30A9-05B2-4F68-826A-38DB42236C2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7B5F30A9-05B2-4F68-826A-38DB42236C2A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E5F8EA70-E2F6-4117-9146-EAC5DB1393A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E5F8EA70-E2F6-4117-9146-EAC5DB1393A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E5F8EA70-E2F6-4117-9146-EAC5DB1393A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E5F8EA70-E2F6-4117-9146-EAC5DB1393A5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
