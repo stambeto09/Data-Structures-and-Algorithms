@@ -3,14 +3,11 @@
     using System;
     using System.Collections.Generic;
     using System.Linq;
-    using System.Text;
-    using System.Threading.Tasks;
 
     public class HashDictionary<K, V> : IEnumerable<KeyValuePair<K, V>>
     {
         const int InitialValuesSize = 4;
         LinkedList<KeyValuePair<K, V>>[] values;
-
 
         public HashDictionary()
         {
@@ -23,7 +20,8 @@
             private set;
         }
 
-        public int Capacity {
+        public int Capacity
+        {
             get
             {
                 return this.values.Length;
@@ -116,5 +114,31 @@
             return this.GetEnumerator();
         }
 
+        public V Find(K key)
+        {
+            var hash = key.GetHashCode();
+
+            foreach (var valueCollection in this.values)
+            {
+                if (valueCollection != null)
+                {
+                    foreach (var value in valueCollection)
+                    {
+                        if (value.Key.GetHashCode() == hash)
+                        {
+                            return value.Value;
+                        }
+                    }
+                }
+            }
+
+            throw new ArgumentException("The item is not found.");
+        }
+
+        public void Clear()
+        {
+            this.values = new LinkedList<KeyValuePair<K, V>>[InitialValuesSize];
+            this.Count = 0;
+        }
     }
 }

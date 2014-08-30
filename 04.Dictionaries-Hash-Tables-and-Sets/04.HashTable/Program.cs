@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace DictionariesHashTablesAndSets
+﻿namespace DictionariesHashTablesAndSets
 {
+    using System;
+
     class Program
     {
         static void Main()
@@ -18,8 +14,17 @@ namespace DictionariesHashTablesAndSets
             table.Add("Krasimira", 2);
             table.Add("Stamat", 1);
 
+            var value = table.Find("Pesho");
+
+            foreach (var person in table)
+            {
+                Console.WriteLine("{0} -> {1}", person.Key, person.Value);
+            }
+
             Console.WriteLine(table.ContainsKey("Pesho"));
             Console.WriteLine(table.ContainsKey("Pesho2"));
+            Console.WriteLine(value);
+            Console.WriteLine();
         }
     }
 }
